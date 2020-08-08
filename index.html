@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <link
+      rel="icon"
+      type="image/svg"
+      href=""
+    />
+    <title>Covid19DE</title>
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body>
+    <noscript>Please enable JavaScript</noscript>
+    <script src="index.js"></script>
+
+    <div class="container">
+      <object id="map" type="image/svg+xml" data="Karte_Deutschland.svg" onload="script()"></object>
+      <label id="slider-label" for="slider">Tag X</label>
+      <input id="slider" type="range" name="day">
+    </div>
+
+  </body>
+</html>
