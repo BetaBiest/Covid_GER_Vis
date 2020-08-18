@@ -8,8 +8,7 @@
  * @returns {Number} Value between new boundaries
  */
 function map(n, start1, stop1, start2, stop2) {
-  const newval = (n - start1) / (stop1 - start1) * (stop2 - start2) + start2;
-  return newval;
+  return (n - start1) / (stop1 - start1) * (stop2 - start2) + start2;
 }
 
 const dataRequest = d3.dsv(',', "https://static.dwcdn.net/data/0yd2t.csv?v=1597046520000", function(d) {
@@ -30,7 +29,7 @@ async function script() {
   var kreise_list = kreise.selectAll('g > [id]').data(data, function(d) {
     return d ? d.lk : this.id;
   });
-
+y
   for (let item of kreise_list._groups[0]) {
     if (item) {
         if (item.nodeName === "g") {
@@ -42,5 +41,19 @@ async function script() {
         }
     }
   }
-
+  document.querySelector('#map').getSVGDocument().querySelectorAll('.st10').forEach((item) => {
+    item.classList.remove('st10');
+    item.classList.add('lg');
+  });
 }
+
+
+  /**
+   * @param {String} rule CSS Selector
+   * @returns {Number} -1 if not found else index
+   */
+  CSSRuleList.prototype.findIndexOfRule = function (rule) {
+    let a = [];
+    for (let i = 0; i < this.length; i++) a.push(this[i].selectorText);
+    return a.indexOf(rule);
+  }
