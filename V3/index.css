@@ -1,0 +1,29 @@
+.hidden {
+  visibility: hidden;
+}
+
+.state {
+  stroke: white;
+  stroke-linejoin: round;
+  stroke-width: 1;
+  fill: none;
+}
+
+/* .state:hover {
+  fill: lightblue;
+  stroke: white;
+  stroke-width: 1;
+} */
+
+.district {
+  stroke: #fafafa;
+  stroke-linejoin: round;
+  stroke-width: 0.6;
+  fill: #CFCFCF;
+}
+
+.district:hover {
+  fill: lightskyblue;
+  stroke: black;
+  stroke-width: 1;
+}
