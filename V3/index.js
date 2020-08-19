@@ -16,32 +16,11 @@ const projection = d3.geoMercator()
 const path = d3.geoPath()
   .projection(projection);
 
+const tooltip = d3.select('#tooltip');
 
-// ------ Script ------
-function fillData(data) {
-  console.log(data);
-  var districtList = svg.selectAll('#districts > *')
-    .data(data, function(d) {
-      debugger;
-      return this.id;
-    });
-  
-  debugger;
-}
+
 
 function drawMap(geoData) {
-  console.log(geoData);
-
-  const exceptions = [
-    {
-      o: "Städteregion Aachen",
-      n: "Stadtregion Aachen"
-    },
-    {
-      o: "Region Hannover",
-      n: "Region Hannover"
-    }
-  ]
 
   const states = topojson.feature(geoData, geoData.objects.states).features;
   const districts = topojson.feature(geoData, geoData.objects.counties).features;
@@ -51,10 +30,20 @@ function drawMap(geoData) {
       .enter().append('path')
       .attr('id', d => d.properties.name)
       .attr('class', 'district')
-      .attr('d', d => path(d)).on('mouseover', function() {
+      .attr('d', d => path(d))
+      .on('mouseover', function() {
         let p = this.parentElement;
         p.removeChild(this);
         p.appendChild(this);
+        tooltip
+          .text(this.id)
+          .style('display', 'block')
+          .style('left', `${path.bounds(this.__data__)[1][0]}px`)
+          .style('top', `${path.bounds(this.__data__)[1][1]}px`);
+      })
+      .on('mouseout', function() {
+        tooltip
+          .style('display', 'none');
       })
       .style('fill', d => {
         if (d.properties.data)
@@ -73,8 +62,6 @@ function drawMap(geoData) {
         p.removeChild(this);
         p.appendChild(this);
       });
-
-  
 }
 
 
@@ -85,14 +72,39 @@ async function script() {
   const data = await d3.csv("data/frameByLK.csv", function(d) {
     return {
       lk: d.Landkreis.replace(/ /g, "_"),
+      lkId: +d.IdLandkreis,
       cases: +d.AnzahlFall,
       deaths: +d.AnzahlTodesfall,
       recovered: +d.AnzahlGenesen
     }
   });
   const geoData = await geoDataR;
+  
+  
+  // Replace Berlin with subdivisions
+  let berlin = geoData.objects.counties.geometries.find(geometrie => { return geometrie.properties.name === "Berlin" });
+  let i_berlin = geoData.objects.counties.geometries.indexOf(berlin);
+  geoData.objects.counties.geometries.splice(i_berlin, 1);
+  for (let i = geoData.objects.berlin.geometries.length; i; --i) {
+    geoData.objects.counties.geometries[geoData.objects.counties.geometries.push(geoData.objects.berlin.geometries.pop()) - 1].properties.districtType = "Stadtkreis";
+  }
+  
+  // Accommodating for "old" map
+    // Merging LK_Göttingen
+  let obj_to_merge = geoData.objects.counties.geometries.filter(g => {
+    return g.id == 3152 || g.id == 3156;
+  })
+  for (let item of obj_to_merge) {
+    geoData.objects.counties.geometries.splice(geoData.objects.counties.geometries.indexOf(item), 1);
+  }
+  let merged_obj = topojson.mergeArcs(geoData, obj_to_merge);
+  merged_obj.properties = obj_to_merge[0].properties;
+  merged_obj.id = 3159;
+  geoData.objects.counties.geometries.push(merged_obj);
+  
+
+  // Merge data into geoData
   for (let feature of geoData.objects.counties.geometries) {
-    // Rename geoData propertie name to match data
     let dT = feature.properties.districtType;
     let prefix = "";
     if (dT === "Stadtkreis" || dT ==="Kreisfreie Stadt") {
@@ -105,9 +117,9 @@ async function script() {
         1: feature.properties.districtType
       })
     }
-    feature.properties.name = prefix + feature.properties.name.replace(/ /g, "_");
-
-    let index = data.indexOf(data.find(d => { return d.lk === feature.properties.name; }));
+    if (prefix) feature.properties.name = prefix + feature.properties.name.replace(/ /g, "_");
+    
+    let index = data.indexOf(data.find(d => { return d.lkId == feature.id; }));
     if (0 <= index) feature.properties.data = data.splice(index, 1)[0];
   }
   console.log(geoData);
