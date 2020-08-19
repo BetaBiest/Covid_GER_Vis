@@ -29,7 +29,7 @@ async function script() {
   var kreise_list = kreise.selectAll('g > [id]').data(data, function(d) {
     return d ? d.lk : this.id;
   });
-y
+
   for (let item of kreise_list._groups[0]) {
     if (item) {
         if (item.nodeName === "g") {
