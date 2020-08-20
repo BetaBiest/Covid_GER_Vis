@@ -5,3 +5,10 @@ I like to run a few test builds and than start over with the new collected knowl
 - [V1](https://betabiest.github.io/Covid_GER_Vis/V1/)
 - [V2](https://betabiest.github.io/Covid_GER_Vis/V2/)
 - [V3](https://betabiest.github.io/Covid_GER_Vis/V3/)
+
+## Source
+- Covid-19 data: [RKI (ArgisHub)]()
+- Germany map: [AliceWi (Github)](https://github.com/AliceWi/TopoJSON-Germany)
+- Population (Record date: 30.12.2019):
+  - [© Statistisches Bundesamt (Destatis), 2020 (12411-0015)](https://www-genesis.destatis.de/genesis//online)
+  - [Statistik Berlin Brandenburg](https://www.statistik-berlin-brandenburg.de)

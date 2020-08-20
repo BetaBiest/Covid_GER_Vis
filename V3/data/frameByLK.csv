@@ -1,413 +1,413 @@
-Landkreis,AnzahlFall,AnzahlTodesfall,AnzahlGenesen
-LK Ahrweiler,256,1,230
-LK Aichach-Friedberg,409,20,385
-LK Alb-Donau-Kreis,715,27,656
-LK Altenburger Land,79,4,75
-LK Altenkirchen,197,11,177
-LK Altmarkkreis Salzwedel,37,1,34
-LK Altötting,664,55,574
-LK Alzey-Worms,291,11,266
-LK Amberg-Sulzbach,500,54,444
-LK Ammerland,206,5,200
-LK Anhalt-Bitterfeld,85,2,81
-LK Ansbach,608,28,579
-LK Aschaffenburg,599,41,550
-LK Augsburg,503,11,412
-LK Aurich,171,8,143
-LK Bad Dürkheim,345,12,319
-LK Bad Kissingen,272,18,247
-LK Bad Kreuznach,247,7,200
-LK Bad Tölz-Wolfratshausen,530,10,508
-LK Bamberg,446,36,400
-LK Barnim,458,29,423
-LK Bautzen,508,20,486
-LK Bayreuth,435,28,404
-LK Berchtesgadener Land,372,25,331
-LK Bergstraße,450,3,413
-LK Bernkastel-Wittlich,218,2,205
-LK Biberach,656,35,599
-LK Birkenfeld,98,3,92
-LK Bitburg-Prüm,277,5,248
-LK Bodenseekreis,356,8,333
-LK Borken,1227,38,1144
-LK Breisgau-Hochschwarzwald,1191,71,1102
-LK Burgenlandkreis,136,2,130
-LK Böblingen,1567,47,1471
-LK Börde,190,13,172
-LK Calw,786,27,750
-LK Celle,231,15,212
-LK Cham,443,21,412
-LK Cloppenburg,241,0,189
-LK Coburg,414,29,376
-LK Cochem-Zell,144,1,138
-LK Coesfeld,902,25,867
-LK Cuxhaven,378,21,354
-LK Dachau,1023,31,956
-LK Dahme-Spreewald,280,8,268
-LK Darmstadt-Dieburg,525,20,454
-LK Deggendorf,357,15,326
-LK Diepholz,500,27,452
-LK Dillingen a.d.Donau,291,29,251
-LK Dingolfing-Landau,829,10,594
-LK Dithmarschen,144,4,115
-LK Donau-Ries,382,23,348
-LK Donnersbergkreis,151,6,132
-LK Düren,816,40,698
-LK Ebersberg,560,5,531
-LK Eichsfeld,163,10,152
-LK Eichstätt,330,20,300
-LK Elbe-Elster,89,3,83
-LK Emmendingen,568,43,514
-LK Emsland,532,25,490
-LK Ennepe-Ruhr-Kreis,666,14,593
-LK Enzkreis,709,22,673
-LK Erding,741,11,708
-LK Erlangen-Höchstadt,310,11,277
-LK Erzgebirgskreis,573,43,524
-LK Esslingen,1995,120,1830
-LK Euskirchen,658,26,598
-LK Forchheim,237,4,217
-LK Freising,1064,46,975
-LK Freudenstadt,596,39,544
-LK Freyung-Grafenau,197,12,184
-LK Friesland,40,2,37
-LK Fulda,480,13,430
-LK Fürstenfeldbruck,1003,36,944
-LK Fürth,517,58,455
-LK Garmisch-Partenkirchen,312,18,285
-LK Germersheim,228,6,203
-LK Gießen,318,4,284
-LK Gifhorn,179,4,170
-LK Goslar,277,29,247
-LK Gotha,326,30,289
-LK Grafschaft Bentheim,272,18,247
-LK Greiz,680,48,621
-LK Groß-Gerau,701,15,606
-LK Göppingen,892,39,818
-LK Görlitz,337,24,262
-LK Göttingen,1328,78,1225
-LK Günzburg,275,4,250
-LK Gütersloh,2773,20,2630
-LK Hameln-Pyrmont,170,7,145
-LK Harburg,605,13,573
-LK Harz,269,5,259
-LK Havelland,201,6,191
-LK Haßberge,180,6,170
-LK Heidekreis,94,2,84
-LK Heidenheim,548,41,499
-LK Heilbronn,1042,42,961
-LK Heinsberg,2026,87,1907
-LK Helmstedt,149,1,141
-LK Herford,525,8,441
-LK Hersfeld-Rotenburg,341,23,304
-LK Herzogtum Lauenburg,293,18,265
-LK Hildburghausen,89,1,83
-LK Hildesheim,466,8,446
-LK Hochsauerlandkreis,787,18,714
-LK Hochtaunuskreis,338,6,313
-LK Hof,484,32,446
-LK Hohenlohekreis,797,47,742
-LK Holzminden,109,7,100
-LK Höxter,392,18,364
-LK Ilm-Kreis,154,6,145
-LK Jerichower Land,53,2,46
-LK Kaiserslautern,141,1,123
-LK Karlsruhe,1123,81,1014
-LK Kassel,479,31,411
-LK Kelheim,526,35,466
-LK Kitzingen,208,3,196
-LK Kleve,1002,37,828
-LK Konstanz,566,17,528
-LK Kronach,175,3,172
-LK Kulmbach,253,11,238
-LK Kusel,116,1,107
-LK Kyffhäuserkreis,56,0,55
-LK Lahn-Dill-Kreis,406,20,358
-LK Landsberg a.Lech,383,10,367
-LK Landshut,743,31,683
-LK Leer,156,6,146
-LK Leipzig,205,4,195
-LK Lichtenfels,326,17,299
-LK Limburg-Weilburg,369,6,326
-LK Lindau,264,8,245
-LK Lippe,857,30,781
-LK Ludwigsburg,1969,72,1828
-LK Ludwigslust-Parchim,138,2,110
-LK Lörrach,721,62,626
-LK Lüchow-Dannenberg,25,3,21
-LK Lüneburg,185,0,180
-LK Main-Kinzig-Kreis,976,51,839
-LK Main-Spessart,171,6,158
-LK Main-Tauber-Kreis,487,11,432
-LK Main-Taunus-Kreis,488,15,414
-LK Mainz-Bingen,480,25,429
-LK Mansfeld-Südharz,72,2,68
-LK Marburg-Biedenkopf,258,4,218
-LK Mayen-Koblenz,379,16,354
-LK Mecklenburgische Seenplatte,140,3,133
-LK Meißen,252,20,226
-LK Merzig-Wadern,252,2,230
-LK Mettmann,1599,83,1365
-LK Miesbach,633,11,594
-LK Miltenberg,341,5,328
-LK Minden-Lübbecke,666,13,592
-LK Mittelsachsen,311,9,298
-LK Märkisch-Oderland,230,4,222
-LK Märkischer Kreis,832,32,694
-LK Mühldorf a.Inn,537,27,489
-LK München,1583,95,1432
-LK Neckar-Odenwald-Kreis,461,22,439
-LK Neu-Ulm,510,26,449
-LK Neuburg-Schrobenhausen,351,18,320
-LK Neumarkt i.d.OPf.,408,17,389
-LK Neunkirchen,293,11,272
-LK Neustadt a.d.Aisch-Bad Windsheim,261,6,252
-LK Neustadt a.d.Waldnaab,847,73,773
-LK Neuwied,275,4,239
-LK Nienburg (Weser),101,4,90
-LK Nordfriesland,98,2,94
-LK Nordhausen,72,2,65
-LK Nordsachsen,152,0,149
-LK Nordwestmecklenburg,97,1,85
-LK Northeim,162,5,156
-LK Nürnberger Land,678,44,624
-LK Oberallgäu,217,7,203
-LK Oberbergischer Kreis,577,18,518
-LK Oberhavel,353,9,330
-LK Oberspreewald-Lausitz,65,2,59
-LK Odenwaldkreis,454,63,376
-LK Oder-Spree,167,3,156
-LK Offenbach,919,44,776
-LK Oldenburg,381,15,318
-LK Olpe,722,56,632
-LK Ortenaukreis,1263,123,1118
-LK Osnabrück,1270,67,1180
-LK Ostalbkreis,1608,43,1471
-LK Ostallgäu,547,39,497
-LK Osterholz,140,0,133
-LK Ostholstein,91,0,85
-LK Ostprignitz-Ruppin,100,0,97
-LK Paderborn,795,34,737
-LK Passau,642,31,606
-LK Peine,186,11,163
-LK Pfaffenhofen a.d.Ilm,396,21,370
-LK Pinneberg,709,47,614
-LK Plön,151,8,126
-LK Potsdam-Mittelmark,610,38,542
-LK Prignitz,32,0,32
-LK Rastatt,576,17,527
-LK Ravensburg,654,7,610
-LK Recklinghausen,1722,43,1537
-LK Regen,201,12,188
-LK Regensburg,528,15,495
-LK Rems-Murr-Kreis,1835,96,1667
-LK Rendsburg-Eckernförde,314,14,266
-LK Reutlingen,1620,84,1507
-LK Rhein-Erft-Kreis,1343,78,1167
-LK Rhein-Hunsrück-Kreis,184,6,165
-LK Rhein-Kreis Neuss,1057,23,901
-LK Rhein-Lahn-Kreis,178,6,160
-LK Rhein-Neckar-Kreis,1169,39,1061
-LK Rhein-Pfalz-Kreis,291,5,275
-LK Rhein-Sieg-Kreis,1704,53,1506
-LK Rheingau-Taunus-Kreis,406,5,367
-LK Rheinisch-Bergischer Kreis,576,23,521
-LK Rhön-Grabfeld,208,8,194
-LK Rosenheim,2358,199,2128
-LK Rostock,81,3,76
-LK Rotenburg (Wümme),141,2,121
-LK Roth,310,7,290
-LK Rottal-Inn,747,48,693
-LK Rottweil,691,26,659
-LK Saale-Holzland-Kreis,75,3,70
-LK Saale-Orla-Kreis,159,12,143
-LK Saalekreis,154,7,135
-LK Saalfeld-Rudolstadt,75,0,72
-LK Saar-Pfalz-Kreis,376,18,325
-LK Saarlouis,597,24,550
-LK Salzlandkreis,79,0,75
-LK Sankt Wendel,181,5,170
-LK Schaumburg,199,7,173
-LK Schleswig-Flensburg,172,4,162
-LK Schmalkalden-Meiningen,186,5,166
-LK Schwalm-Eder-Kreis,614,39,568
-LK Schwandorf,524,20,492
-LK Schwarzwald-Baar-Kreis,605,33,559
-LK Schweinfurt,559,25,517
-LK Schwäbisch Hall,907,59,819
-LK Segeberg,379,7,358
-LK Siegen-Wittgenstein,489,8,405
-LK Sigmaringen,802,35,755
-LK Soest,471,8,423
-LK Sonneberg,311,22,287
-LK Spree-Neiße,68,0,67
-LK Stade,248,9,230
-LK Stadtverband Saarbrücken,1309,114,1180
-LK Starnberg,624,13,599
-LK Steinburg,195,3,187
-LK Steinfurt,1528,87,1357
-LK Stendal,109,6,103
-LK Stormarn,508,34,445
-LK Straubing-Bogen,572,29,536
-LK Sächsische Schweiz-Osterzgebirge,402,2,388
-LK Sömmerda,47,1,42
-LK Südliche Weinstraße,171,4,155
-LK Südwestpfalz,135,3,120
-LK Teltow-Fläming,201,13,180
-LK Tirschenreuth,1142,139,1002
-LK Traunstein,1330,88,1232
-LK Trier-Saarburg,269,9,244
-LK Tuttlingen,530,24,502
-LK Tübingen,1310,60,1244
-LK Uckermark,47,2,43
-LK Uelzen,73,0,67
-LK Unna,1089,40,910
-LK Unstrut-Hainich-Kreis,92,3,89
-LK Unterallgäu,299,14,273
-LK Vechta,543,12,476
-LK Verden,302,8,283
-LK Viersen,857,37,753
-LK Vogelsbergkreis,154,5,142
-LK Vogtlandkreis,520,22,495
-LK Vorpommern-Greifswald,162,7,148
-LK Vorpommern-Rügen,102,2,93
-LK Vulkaneifel,130,5,123
-LK Waldeck-Frankenberg,211,5,198
-LK Waldshut,342,35,299
-LK Warendorf,929,20,865
-LK Wartburgkreis,101,2,97
-LK Weilheim-Schongau,376,3,367
-LK Weimarer Land,83,4,73
-LK Weißenburg-Gunzenhausen,351,25,317
-LK Werra-Meißner-Kreis,240,16,220
-LK Wesel,1118,28,969
-LK Wesermarsch,97,2,76
-LK Westerwaldkreis,449,22,385
-LK Wetteraukreis,454,13,400
-LK Wittenberg,168,3,161
-LK Wittmund,43,0,41
-LK Wolfenbüttel,209,14,181
-LK Wunsiedel i.Fichtelgebirge,678,41,631
-LK Würzburg,455,7,416
-LK Zollernalbkreis,1269,77,1171
-LK Zwickau,902,52,838
-Region Hannover,3133,120,2726
-SK Amberg,99,4,91
-SK Ansbach,155,8,147
-SK Aschaffenburg,140,1,135
-SK Augsburg,595,16,558
-SK Baden-Baden,191,19,168
-SK Bamberg,218,22,186
-SK Bayreuth,218,11,200
-SK Berlin Charlottenburg-Wilmersdorf,1024,23,934
-SK Berlin Friedrichshain-Kreuzberg,880,9,783
-SK Berlin Lichtenberg,589,12,521
-SK Berlin Marzahn-Hellersdorf,555,6,531
-SK Berlin Mitte,1580,16,1403
-SK Berlin Neukölln,1298,42,1136
-SK Berlin Pankow,912,37,835
-SK Berlin Reinickendorf,806,21,726
-SK Berlin Spandau,576,9,523
-SK Berlin Steglitz-Zehlendorf,669,13,640
-SK Berlin Tempelhof-Schöneberg,963,25,873
-SK Berlin Treptow-Köpenick,462,11,428
-SK Bielefeld,691,6,563
-SK Bochum,982,24,770
-SK Bonn,933,9,850
-SK Bottrop,292,7,247
-SK Brandenburg a.d.Havel,66,1,64
-SK Braunschweig,370,18,339
-SK Bremen,1613,50,1513
-SK Bremerhaven,237,6,222
-SK Chemnitz,239,6,222
-SK Coburg,124,3,121
-SK Cottbus,45,0,43
-SK Darmstadt,315,18,270
-SK Delmenhorst,134,3,126
-SK Dessau-Roßlau,73,2,64
-SK Dortmund,1492,17,1278
-SK Dresden,653,10,630
-SK Duisburg,2254,66,1901
-SK Düsseldorf,2427,45,1995
-SK Eisenach,36,4,32
-SK Emden,32,0,24
-SK Erfurt,161,2,145
-SK Erlangen,289,11,268
-SK Essen,1476,46,1187
-SK Flensburg,65,3,54
-SK Frankenthal,54,2,48
-SK Frankfurt (Oder),36,0,34
-SK Frankfurt am Main,2252,69,1936
-SK Freiburg i.Breisgau,1034,79,923
-SK Fürth,456,38,401
-SK Gelsenkirchen,735,19,641
-SK Gera,271,22,241
-SK Hagen,589,13,504
-SK Halle,382,14,359
-SK Hamburg,5901,264,5188
-SK Hamm,660,36,573
-SK Heidelberg,335,7,316
-SK Heilbronn,507,17,474
-SK Herne,414,5,328
-SK Hof,147,4,141
-SK Ingolstadt,595,38,523
-SK Jena,165,3,160
-SK Kaiserslautern,229,6,216
-SK Karlsruhe,474,14,432
-SK Kassel,476,9,398
-SK Kaufbeuren,118,5,108
-SK Kempten,122,10,111
-SK Kiel,389,10,331
-SK Koblenz,302,18,266
-SK Krefeld,780,24,720
-SK Köln,3322,110,2728
-SK Landau i.d.Pfalz,60,2,56
-SK Landshut,302,9,284
-SK Leipzig,680,12,630
-SK Leverkusen,367,5,319
-SK Ludwigshafen,428,2,367
-SK Lübeck,202,1,186
-SK Magdeburg,319,5,288
-SK Mainz,772,27,691
-SK Mannheim,622,13,563
-SK Memmingen,66,0,59
-SK Mönchengladbach,919,47,784
-SK Mülheim a.d.Ruhr,398,14,361
-SK München,7750,223,7119
-SK Münster,880,13,790
-SK Neumünster,96,3,85
-SK Neustadt a.d.Weinstraße,131,2,118
-SK Nürnberg,1290,52,1164
-SK Oberhausen,464,12,400
-SK Offenbach,370,9,297
-SK Oldenburg,204,2,197
-SK Osnabrück,578,16,539
-SK Passau,152,18,129
-SK Pforzheim,507,8,471
-SK Pirmasens,38,0,34
-SK Potsdam,659,51,597
-SK Regensburg,748,10,722
-SK Remscheid,315,18,260
-SK Rosenheim,560,23,524
-SK Rostock,135,2,122
-SK Salzgitter,183,9,160
-SK Schwabach,94,2,89
-SK Schweinfurt,201,18,175
-SK Schwerin,119,0,111
-SK Solingen,432,12,376
-SK Speyer,126,1,113
-SK Straubing,455,48,398
-SK Stuttgart,1764,65,1617
-SK Suhl,26,2,19
-SK Trier,147,1,132
-SK Ulm,372,5,316
-SK Weiden i.d.OPf.,340,20,319
-SK Weimar,97,0,92
-SK Wiesbaden,677,22,559
-SK Wilhelmshaven,35,1,31
-SK Wolfsburg,396,52,331
-SK Worms,241,8,222
-SK Wuppertal,1291,86,1051
-SK Würzburg,504,52,442
-SK Zweibrücken,45,1,43
-StadtRegion Aachen,2216,101,2049
+Landkreis,IdLandkreis,AnzahlFall,AnzahlTodesfall,AnzahlGenesen
+LK Ahrweiler,07131,260,1,231
+LK Aichach-Friedberg,09771,418,20,385
+LK Alb-Donau-Kreis,08425,715,27,658
+LK Altenburger Land,16077,79,4,75
+LK Altenkirchen,07132,197,11,177
+LK Altmarkkreis Salzwedel,15081,37,1,35
+LK Altötting,09171,669,55,576
+LK Alzey-Worms,07331,292,11,266
+LK Amberg-Sulzbach,09371,500,54,444
+LK Ammerland,03451,209,5,201
+LK Anhalt-Bitterfeld,15082,85,2,81
+LK Ansbach,09571,608,28,579
+LK Aschaffenburg,09671,604,42,550
+LK Augsburg,09772,507,11,413
+LK Aurich,03452,171,8,149
+LK Bad Dürkheim,07332,345,12,319
+LK Bad Kissingen,09672,273,18,247
+LK Bad Kreuznach,07133,249,7,200
+LK Bad Tölz-Wolfratshausen,09173,533,10,509
+LK Bamberg,09471,447,36,400
+LK Barnim,12060,459,29,423
+LK Bautzen,14625,509,21,486
+LK Bayreuth,09472,436,28,405
+LK Berchtesgadener Land,09172,372,25,332
+LK Bergstraße,06431,456,3,413
+LK Bernkastel-Wittlich,07231,220,2,205
+LK Biberach,08426,662,36,600
+LK Birkenfeld,07134,100,3,92
+LK Bitburg-Prüm,07232,277,5,248
+LK Bodenseekreis,08435,357,8,334
+LK Borken,05554,1232,38,1146
+LK Breisgau-Hochschwarzwald,08315,1191,71,1103
+LK Burgenlandkreis,15084,137,2,130
+LK Böblingen,08115,1583,47,1478
+LK Börde,15083,190,13,173
+LK Calw,08235,787,27,751
+LK Celle,03351,231,15,213
+LK Cham,09372,446,21,412
+LK Cloppenburg,03453,244,0,196
+LK Coburg,09473,419,29,376
+LK Cochem-Zell,07135,146,1,138
+LK Coesfeld,05558,902,25,868
+LK Cuxhaven,03352,379,21,355
+LK Dachau,09174,1029,31,957
+LK Dahme-Spreewald,12061,281,8,269
+LK Darmstadt-Dieburg,06432,528,20,457
+LK Deggendorf,09271,357,15,327
+LK Diepholz,03251,503,27,454
+LK Dillingen a.d.Donau,09773,294,28,251
+LK Dingolfing-Landau,09279,829,10,598
+LK Dithmarschen,01051,146,4,117
+LK Donau-Ries,09779,390,23,349
+LK Donnersbergkreis,07333,151,6,132
+LK Düren,05358,819,40,709
+LK Ebersberg,09175,577,5,531
+LK Eichsfeld,16061,163,10,152
+LK Eichstätt,09176,338,20,304
+LK Elbe-Elster,12062,89,3,83
+LK Emmendingen,08316,569,43,514
+LK Emsland,03454,538,25,495
+LK Ennepe-Ruhr-Kreis,05954,681,15,597
+LK Enzkreis,08236,710,22,675
+LK Erding,09177,745,11,710
+LK Erlangen-Höchstadt,09572,311,11,281
+LK Erzgebirgskreis,14521,573,43,524
+LK Esslingen,08116,2005,120,1835
+LK Euskirchen,05366,658,26,602
+LK Forchheim,09474,238,4,222
+LK Freising,09178,1063,46,976
+LK Freudenstadt,08237,596,39,545
+LK Freyung-Grafenau,09272,197,12,184
+LK Friesland,03455,40,2,37
+LK Fulda,06631,482,13,433
+LK Fürstenfeldbruck,09179,1015,36,945
+LK Fürth,09573,520,58,455
+LK Garmisch-Partenkirchen,09180,313,18,285
+LK Germersheim,07334,235,6,204
+LK Gießen,06531,324,4,288
+LK Gifhorn,03151,179,4,170
+LK Goslar,03153,277,29,247
+LK Gotha,16067,327,30,289
+LK Grafschaft Bentheim,03456,272,18,247
+LK Greiz,16076,680,48,624
+LK Groß-Gerau,06433,715,15,610
+LK Göppingen,08117,900,39,823
+LK Görlitz,14626,337,24,264
+LK Göttingen,03159,1337,78,1232
+LK Günzburg,09774,280,4,251
+LK Gütersloh,05754,2789,20,2648
+LK Hameln-Pyrmont,03252,170,7,147
+LK Harburg,03353,605,13,577
+LK Harz,15085,269,5,259
+LK Havelland,12063,201,6,191
+LK Haßberge,09674,181,6,170
+LK Heidekreis,03358,95,2,85
+LK Heidenheim,08135,548,41,500
+LK Heilbronn,08125,1052,42,962
+LK Heinsberg,05370,2026,87,1908
+LK Helmstedt,03154,153,1,141
+LK Herford,05758,528,8,442
+LK Hersfeld-Rotenburg,06632,340,23,303
+LK Herzogtum Lauenburg,01053,293,18,267
+LK Hildburghausen,16069,90,1,83
+LK Hildesheim,03254,468,8,446
+LK Hochsauerlandkreis,05958,788,18,719
+LK Hochtaunuskreis,06434,339,6,315
+LK Hof,09475,489,32,446
+LK Hohenlohekreis,08126,799,47,742
+LK Holzminden,03255,109,7,100
+LK Höxter,05762,395,18,364
+LK Ilm-Kreis,16070,154,6,145
+LK Jerichower Land,15086,53,2,46
+LK Kaiserslautern,07335,146,1,125
+LK Karlsruhe,08215,1126,81,1015
+LK Kassel,06633,479,31,416
+LK Kelheim,09273,539,35,468
+LK Kitzingen,09675,208,3,197
+LK Kleve,05154,1008,37,828
+LK Konstanz,08335,573,17,529
+LK Kronach,09476,176,3,172
+LK Kulmbach,09477,253,11,238
+LK Kusel,07336,116,1,112
+LK Kyffhäuserkreis,16065,56,0,55
+LK Lahn-Dill-Kreis,06532,413,20,362
+LK Landsberg a.Lech,09181,390,10,367
+LK Landshut,09274,748,31,685
+LK Leer,03457,160,6,147
+LK Leipzig,14729,204,4,195
+LK Lichtenfels,09478,330,17,299
+LK Limburg-Weilburg,06533,376,6,327
+LK Lindau,09776,264,8,245
+LK Lippe,05766,864,30,785
+LK Ludwigsburg,08118,1969,72,1830
+LK Ludwigslust-Parchim,13076,138,2,113
+LK Lörrach,08336,721,62,628
+LK Lüchow-Dannenberg,03354,25,3,21
+LK Lüneburg,03355,191,0,180
+LK Main-Kinzig-Kreis,06435,989,51,845
+LK Main-Spessart,09677,173,6,159
+LK Main-Tauber-Kreis,08128,487,11,438
+LK Main-Taunus-Kreis,06436,501,15,421
+LK Mainz-Bingen,07339,482,25,429
+LK Mansfeld-Südharz,15087,72,2,68
+LK Marburg-Biedenkopf,06534,263,4,221
+LK Mayen-Koblenz,07137,389,16,355
+LK Mecklenburgische Seenplatte,13071,140,3,134
+LK Meißen,14627,252,20,227
+LK Merzig-Wadern,10042,252,2,234
+LK Mettmann,05158,1614,83,1378
+LK Miesbach,09182,642,11,595
+LK Miltenberg,09676,342,5,329
+LK Minden-Lübbecke,05770,671,13,593
+LK Mittelsachsen,14522,311,9,298
+LK Märkisch-Oderland,12064,230,4,223
+LK Märkischer Kreis,05962,838,32,696
+LK Mühldorf a.Inn,09183,543,27,491
+LK München,09184,1592,95,1437
+LK Neckar-Odenwald-Kreis,08225,465,22,439
+LK Neu-Ulm,09775,514,26,449
+LK Neuburg-Schrobenhausen,09185,352,18,321
+LK Neumarkt i.d.OPf.,09373,409,17,390
+LK Neunkirchen,10043,293,11,272
+LK Neustadt a.d.Aisch-Bad Windsheim,09575,264,6,252
+LK Neustadt a.d.Waldnaab,09374,847,73,773
+LK Neuwied,07138,276,4,240
+LK Nienburg (Weser),03256,102,4,90
+LK Nordfriesland,01054,98,2,94
+LK Nordhausen,16062,72,2,66
+LK Nordsachsen,14730,152,0,149
+LK Nordwestmecklenburg,13074,97,1,86
+LK Northeim,03155,166,5,157
+LK Nürnberger Land,09574,680,44,625
+LK Oberallgäu,09780,220,7,203
+LK Oberbergischer Kreis,05374,580,18,520
+LK Oberhavel,12065,353,9,331
+LK Oberspreewald-Lausitz,12066,66,2,59
+LK Odenwaldkreis,06437,459,63,381
+LK Oder-Spree,12067,170,3,159
+LK Offenbach,06438,926,44,787
+LK Oldenburg,03458,385,15,321
+LK Olpe,05966,724,56,633
+LK Ortenaukreis,08317,1277,124,1117
+LK Osnabrück,03459,1273,67,1185
+LK Ostalbkreis,08136,1613,43,1481
+LK Ostallgäu,09777,550,39,498
+LK Osterholz,03356,140,0,133
+LK Ostholstein,01055,91,0,85
+LK Ostprignitz-Ruppin,12068,100,0,97
+LK Paderborn,05774,801,34,740
+LK Passau,09275,641,31,606
+LK Peine,03157,186,11,165
+LK Pfaffenhofen a.d.Ilm,09186,396,21,371
+LK Pinneberg,01056,712,47,615
+LK Plön,01057,151,8,127
+LK Potsdam-Mittelmark,12069,610,38,546
+LK Prignitz,12070,32,0,32
+LK Rastatt,08216,581,17,528
+LK Ravensburg,08436,668,7,610
+LK Recklinghausen,05562,1734,43,1545
+LK Regen,09276,201,12,188
+LK Regensburg,09375,529,15,494
+LK Rems-Murr-Kreis,08119,1853,96,1671
+LK Rendsburg-Eckernförde,01058,314,14,269
+LK Reutlingen,08415,1627,84,1515
+LK Rhein-Erft-Kreis,05362,1352,78,1172
+LK Rhein-Hunsrück-Kreis,07140,187,6,168
+LK Rhein-Kreis Neuss,05162,1059,23,905
+LK Rhein-Lahn-Kreis,07141,178,6,161
+LK Rhein-Neckar-Kreis,08226,1171,39,1060
+LK Rhein-Pfalz-Kreis,07338,303,5,277
+LK Rhein-Sieg-Kreis,05382,1716,53,1512
+LK Rheingau-Taunus-Kreis,06439,406,5,370
+LK Rheinisch-Bergischer Kreis,05378,576,23,526
+LK Rhön-Grabfeld,09673,208,8,195
+LK Rosenheim,09187,2363,199,2129
+LK Rostock,13072,84,3,76
+LK Rotenburg (Wümme),03357,141,2,123
+LK Roth,09576,312,7,291
+LK Rottal-Inn,09277,757,48,695
+LK Rottweil,08325,695,26,660
+LK Saale-Holzland-Kreis,16074,75,3,70
+LK Saale-Orla-Kreis,16075,159,12,144
+LK Saalekreis,15088,154,7,135
+LK Saalfeld-Rudolstadt,16073,75,0,72
+LK Saar-Pfalz-Kreis,10045,376,18,330
+LK Saarlouis,10044,601,24,550
+LK Salzlandkreis,15089,79,0,75
+LK Sankt Wendel,10046,181,5,170
+LK Schaumburg,03257,199,7,174
+LK Schleswig-Flensburg,01059,173,4,162
+LK Schmalkalden-Meiningen,16066,186,5,166
+LK Schwalm-Eder-Kreis,06634,618,39,567
+LK Schwandorf,09376,530,20,492
+LK Schwarzwald-Baar-Kreis,08326,606,33,562
+LK Schweinfurt,09678,559,25,517
+LK Schwäbisch Hall,08127,908,59,819
+LK Segeberg,01060,379,7,359
+LK Siegen-Wittgenstein,05970,494,8,412
+LK Sigmaringen,08437,808,35,757
+LK Soest,05974,474,8,435
+LK Sonneberg,16072,311,22,287
+LK Spree-Neiße,12071,68,0,67
+LK Stade,03359,256,9,233
+LK Stadtverband Saarbrücken,10041,1314,114,1185
+LK Starnberg,09188,625,13,600
+LK Steinburg,01061,195,3,187
+LK Steinfurt,05566,1540,87,1366
+LK Stendal,15090,111,6,103
+LK Stormarn,01062,512,35,446
+LK Straubing-Bogen,09278,573,29,536
+LK Sächsische Schweiz-Osterzgebirge,14628,404,2,388
+LK Sömmerda,16068,47,1,43
+LK Südliche Weinstraße,07337,171,4,156
+LK Südwestpfalz,07340,135,3,120
+LK Teltow-Fläming,12072,205,13,182
+LK Tirschenreuth,09377,1143,139,1003
+LK Traunstein,09189,1334,88,1232
+LK Trier-Saarburg,07235,270,9,247
+LK Tuttlingen,08327,535,24,502
+LK Tübingen,08416,1313,60,1243
+LK Uckermark,12073,47,2,43
+LK Uelzen,03360,73,0,67
+LK Unna,05978,1090,40,929
+LK Unstrut-Hainich-Kreis,16064,92,3,89
+LK Unterallgäu,09778,299,14,273
+LK Vechta,03460,547,12,483
+LK Verden,03361,302,8,284
+LK Viersen,05166,857,37,756
+LK Vogelsbergkreis,06535,154,5,142
+LK Vogtlandkreis,14523,523,22,495
+LK Vorpommern-Greifswald,13075,162,7,150
+LK Vorpommern-Rügen,13073,103,2,93
+LK Vulkaneifel,07233,131,5,124
+LK Waldeck-Frankenberg,06635,214,5,200
+LK Waldshut,08337,343,35,299
+LK Warendorf,05570,930,20,868
+LK Wartburgkreis,16063,101,2,97
+LK Weilheim-Schongau,09190,376,3,368
+LK Weimarer Land,16071,83,4,76
+LK Weißenburg-Gunzenhausen,09577,353,25,317
+LK Werra-Meißner-Kreis,06636,241,16,220
+LK Wesel,05170,1118,28,980
+LK Wesermarsch,03461,97,2,76
+LK Westerwaldkreis,07143,453,22,385
+LK Wetteraukreis,06440,464,13,401
+LK Wittenberg,15091,168,3,161
+LK Wittmund,03462,43,0,41
+LK Wolfenbüttel,03158,209,14,181
+LK Wunsiedel i.Fichtelgebirge,09479,677,41,630
+LK Würzburg,09679,459,7,416
+LK Zollernalbkreis,08417,1271,77,1173
+LK Zwickau,14524,901,51,839
+Region Hannover,03241,3148,120,2739
+SK Amberg,09361,102,4,91
+SK Ansbach,09561,155,8,147
+SK Aschaffenburg,09661,142,1,135
+SK Augsburg,09761,617,16,559
+SK Baden-Baden,08211,192,19,168
+SK Bamberg,09461,218,22,187
+SK Bayreuth,09462,221,11,200
+SK Berlin Charlottenburg-Wilmersdorf,11004,1029,23,940
+SK Berlin Friedrichshain-Kreuzberg,11002,885,9,789
+SK Berlin Lichtenberg,11011,592,12,527
+SK Berlin Marzahn-Hellersdorf,11010,560,6,533
+SK Berlin Mitte,11001,1596,16,1415
+SK Berlin Neukölln,11008,1316,42,1150
+SK Berlin Pankow,11003,915,37,836
+SK Berlin Reinickendorf,11012,814,21,726
+SK Berlin Spandau,11005,577,9,530
+SK Berlin Steglitz-Zehlendorf,11006,678,13,641
+SK Berlin Tempelhof-Schöneberg,11007,965,25,878
+SK Berlin Treptow-Köpenick,11009,463,11,431
+SK Bielefeld,05711,695,7,569
+SK Bochum,05911,986,24,776
+SK Bonn,05314,941,9,857
+SK Bottrop,05512,292,7,248
+SK Brandenburg a.d.Havel,12051,66,1,64
+SK Braunschweig,03101,371,18,340
+SK Bremen,04011,1625,50,1517
+SK Bremerhaven,04012,239,6,223
+SK Chemnitz,14511,239,6,226
+SK Coburg,09463,125,3,121
+SK Cottbus,12052,45,0,43
+SK Darmstadt,06411,319,18,272
+SK Delmenhorst,03401,134,3,127
+SK Dessau-Roßlau,15001,73,2,64
+SK Dortmund,05913,1520,17,1287
+SK Dresden,14612,654,11,628
+SK Duisburg,05112,2273,66,1927
+SK Düsseldorf,05111,2448,45,2003
+SK Eisenach,16056,36,4,32
+SK Emden,03402,32,0,25
+SK Erfurt,16051,164,2,147
+SK Erlangen,09562,291,11,268
+SK Essen,05113,1492,46,1201
+SK Flensburg,01001,67,3,54
+SK Frankenthal,07311,59,2,48
+SK Frankfurt (Oder),12053,44,0,34
+SK Frankfurt am Main,06412,2282,69,1949
+SK Freiburg i.Breisgau,08311,1034,79,929
+SK Fürth,09563,467,38,404
+SK Gelsenkirchen,05513,743,19,647
+SK Gera,16052,270,22,240
+SK Hagen,05914,600,13,508
+SK Halle,15002,383,14,359
+SK Hamburg,02000,5926,264,5217
+SK Hamm,05915,665,36,573
+SK Heidelberg,08221,347,7,320
+SK Heilbronn,08121,514,17,474
+SK Herne,05916,414,5,330
+SK Hof,09464,151,4,141
+SK Ingolstadt,09161,598,38,528
+SK Jena,16053,165,3,160
+SK Kaiserslautern,07312,230,6,216
+SK Karlsruhe,08212,476,14,432
+SK Kassel,06611,482,9,405
+SK Kaufbeuren,09762,119,5,108
+SK Kempten,09763,128,10,111
+SK Kiel,01002,393,11,335
+SK Koblenz,07111,310,18,266
+SK Krefeld,05114,780,24,722
+SK Köln,05315,3321,110,2746
+SK Landau i.d.Pfalz,07313,60,2,56
+SK Landshut,09261,306,9,283
+SK Leipzig,14713,687,12,632
+SK Leverkusen,05316,370,5,321
+SK Ludwigshafen,07314,446,2,370
+SK Lübeck,01003,204,1,188
+SK Magdeburg,15003,323,5,290
+SK Mainz,07315,773,27,696
+SK Mannheim,08222,636,13,564
+SK Memmingen,09764,70,0,59
+SK Mönchengladbach,05116,923,48,795
+SK Mülheim a.d.Ruhr,05117,410,14,361
+SK München,09162,7835,222,7137
+SK Münster,05515,884,13,809
+SK Neumünster,01004,97,3,85
+SK Neustadt a.d.Weinstraße,07316,131,2,119
+SK Nürnberg,09564,1314,52,1166
+SK Oberhausen,05119,464,12,410
+SK Offenbach,06413,376,9,304
+SK Oldenburg,03403,205,2,199
+SK Osnabrück,03404,580,16,540
+SK Passau,09262,152,18,129
+SK Pforzheim,08231,509,8,471
+SK Pirmasens,07317,38,0,35
+SK Potsdam,12054,660,51,599
+SK Regensburg,09362,751,10,722
+SK Remscheid,05120,318,18,261
+SK Rosenheim,09163,570,23,525
+SK Rostock,13003,135,2,122
+SK Salzgitter,03102,183,9,162
+SK Schwabach,09565,94,2,89
+SK Schweinfurt,09662,200,18,175
+SK Schwerin,13004,119,0,112
+SK Solingen,05122,432,12,377
+SK Speyer,07318,134,1,115
+SK Straubing,09263,456,48,398
+SK Stuttgart,08111,1791,65,1625
+SK Suhl,16054,26,2,19
+SK Trier,07211,153,1,135
+SK Ulm,08421,372,5,317
+SK Weiden i.d.OPf.,09363,340,20,319
+SK Weimar,16055,97,0,92
+SK Wiesbaden,06414,691,22,568
+SK Wilhelmshaven,03405,35,1,32
+SK Wolfsburg,03103,396,52,332
+SK Worms,07319,244,8,223
+SK Wuppertal,05124,1300,86,1059
+SK Würzburg,09663,507,52,443
+SK Zweibrücken,07320,45,1,43
+StadtRegion Aachen,05334,2229,101,2057
