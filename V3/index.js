@@ -101,12 +101,19 @@ async function script() {
     if (0 <= index) feature.properties.population = popData.splice(index, 1)[0].population;
   }
 
+  // *** Headline & Text ***
+  svg.append('g').attr('id', 'labels')
+    .append('text')
+    .text('Covid 19 in Germany')
+    .attr('x', 0)
+    .attr('y', 20);
+
+
   // *** Color legend ***
-  const numOfColors = 9;
-  const colors = d3['schemeReds'][numOfColors];
-  const colorScale = d3.scaleQuantize()
-    .domain([0,1600])
-    .range(colors);
+  const numOfColors = 256;
+  //const colors = d3['schemeTurbo'][numOfColors];
+  const colorScale = d3.scaleSequential(d3.interpolateRdYlGn)
+    .domain([1,10000]);
 
   
   // *** Fiting slider ***
@@ -131,10 +138,15 @@ async function script() {
           if (!obj) obj = d.properties.data[d.properties.data.length - 1];
           var index = d.properties.data.indexOf(obj);
           if (obj.date.getTime() != day.getTime() && index) index--;
-          if (!d.properties.data[index]) debugger;
-          return colorScale(d.properties.data[index].acute ? d.properties.population / d.properties.data[index].acute : 0);
+          return colorScale(d.properties.data[index].acute ? d.properties.population / d.properties.data[index].acute : d.properties.population);
         })
     });
+
+  // *** Setting Styles ***
+  const svgStyle = svg.append('style');
+  svgStyle.text('\
+    text{font-size:3em;}\
+    ');
 
   // *** Draw Map ***
   const states = topojson.feature(geoData, geoData.objects.states).features;
@@ -172,6 +184,7 @@ async function script() {
         p.removeChild(this);
         p.appendChild(this);
       });
+  
 }
 
 
