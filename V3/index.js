@@ -1,6 +1,6 @@
 // ------ Global Values ------
-const width = 600,
-  height = 800;
+const width = 700,
+  height = 900;
 
 const slider = d3.select('#slider');
 const slider_label = d3.select('#slider-label');
@@ -12,6 +12,9 @@ const svg = d3.select('#container').append('svg')
   .attr('xmlns', "ttp://www.w3.org/2000/svg")
   .attr('width', width)
   .attr('height', height);
+
+const defs = svg.append('defs');
+const labels = svg.append('g');
 
 const projection = d3.geoMercator()
   .center([10.5, 51.25])
@@ -28,6 +31,7 @@ const tooltip = d3.select('#tooltip');
 // #####################################
 
 async function script() {
+  // *** Load stuff ***
   const geoDataR = d3.json("https://raw.githubusercontent.com/AliceWi/TopoJSON-Germany/master/germany.json");
   const popDataR = d3.dsv(";", "data/de_einwohnerzahlen_kreise_12411-0015_slim.csv", function(d) {
     return {
@@ -35,6 +39,7 @@ async function script() {
       population: +d.population
     }
   });
+  const svgStyleR = d3.text('map.css');
   const data = await d3.csv("data/timeFrameByLK.csv", function(d) {
     return {
       lkId: d.IdLandkreis,
@@ -45,6 +50,8 @@ async function script() {
       acute: +d.acute
     }
   });
+  
+  // *** Create nested data ***
   const nestedData = d3.nest()
     .key(d => d.lkId)
     .entries(data);
@@ -101,19 +108,66 @@ async function script() {
     if (0 <= index) feature.properties.population = popData.splice(index, 1)[0].population;
   }
 
+  // *** Setting Stylesheet for the SVG ***
+  // load stylesheet into html directly to make it available for later export of the svg
+  const svgStyle = await svgStyleR;
+  svg.append('style').text(svgStyle);
+
   // *** Headline & Text ***
-  svg.append('g').attr('id', 'labels')
-    .append('text')
-    .text('Covid 19 in Germany')
-    .attr('x', 0)
-    .attr('y', 20);
+  labels.append('text')
+    .classed('titel', true)
+    .text('Covid 19 development in Germany')
+    .attr('x', 40).attr('y', 40);
+  
+  labels.append('text')
+    .classed('subtitle', true)
+    .text('population / acute infections')
+    .attr('x', 320).attr('y', 75);
+
+  const src = labels.append('g')
+    .attr('transform', 'translate(340,840)');
+  
+  const ref = src.append('text')
+    .attr('id', 'ref')
+    .text('Data: RKI (ArcGISHub) State: 00 Jan');
+
+  src.append('text')
+    .text('Population: © Statistisches Bundesamt (Destatis), 2020')
+    .attr('transform', 'translate(0,20)');
 
 
   // *** Color legend ***
-  const numOfColors = 256;
-  //const colors = d3['schemeTurbo'][numOfColors];
-  const colorScale = d3.scaleSequential(d3.interpolateRdYlGn)
-    .domain([1,10000]);
+  const cSSize = 120;
+  const colors = ['#fa2600', '#ff8c00', '#ddee22', '#227711'];
+  const colorScale = d3.scaleLinear()
+    .domain([10,1000,5000,10000])
+    .range(colors)
+    .clamp(true);
+  const gradient = defs.append('linearGradient')
+    .attr('id', 'gradient');
+  gradient.attr('x1', '0%').attr('y1', '0%').attr('x2', '0%').attr('y2', '100%');
+  gradient.selectAll('stop')
+    .data([
+      {offset: "0%", color: colors[0]},
+      {offset: "10%", color: colors[1]},
+      {offset: "50%", color: colors[2]},
+      {offset: "100%", color: colors[3]}
+    ]).enter().append('stop')
+    .attr('offset', d => d.offset)
+    .attr('stop-color', d => d.color);
+  const cS = labels.append('g')
+    .attr('id', 'color-scale')
+    .attr('transform', 'translate(520,520)');
+  cS.append('rect')
+    .attr('width', 20)
+    .attr('height', cSSize)
+    .style('fill', 'url(#gradient)');
+  const yLeg = d3.scaleLinear().domain([0,10000]).range([0,cSSize]);
+  const cSAxis = d3.axisRight(yLeg)
+    .tickValues(colorScale.domain())
+    .tickSize(25);
+  cS.append('g')
+    .attr('transform', 'translate(0,0)').call(cSAxis);
 
   
   // *** Fiting slider ***
@@ -127,11 +181,13 @@ async function script() {
     .attr('step', 1)
     .on('input', function getResDate() {
       var day = new Date(dateRange[0].getTime() + this.value * 86400000);
-      
+      dayT = formatTime(day);
+
       slider_label
         .datum(day)
-        .text(formatTime(day));
-      
+        .text(dayT);
+      ref.text('Data: RKI (ArcGISHub) State: ' + dayT);
+
       d3.select('#districts').selectAll('path')
         .style('fill', (d, i) => {
           var obj = d.properties.data.find(x => { return x.date.getTime() >= day.getTime(); });
@@ -140,16 +196,11 @@ async function script() {
           if (obj.date.getTime() != day.getTime() && index) index--;
           return colorScale(d.properties.data[index].acute ? d.properties.population / d.properties.data[index].acute : d.properties.population);
         })
+
     });
 
-  // *** Setting Styles ***
-  const svgStyle = svg.append('style');
-  svgStyle.text('\
-    text{font-size:3em;}\
-    ');
-
   // *** Draw Map ***
-  const states = topojson.feature(geoData, geoData.objects.states).features;
+  const statesB = topojson.mesh(geoData, geoData.objects.states, function(a,b) { return a!==b; });
   const districts = topojson.feature(geoData, geoData.objects.counties).features;
 
   svg.append('g').attr('id', 'districts')
@@ -163,7 +214,7 @@ async function script() {
         p.removeChild(this);
         p.appendChild(this);
         tooltip
-          .text(this.id)
+          .text(this.id.replace(/_/g, " "))
           .style('display', 'block')
           .style('left', `${path.bounds(this.__data__)[1][0]}px`)
           .style('top', `${path.bounds(this.__data__)[1][1]}px`);
@@ -173,18 +224,14 @@ async function script() {
           .style('display', 'none');
       });
 
-  svg.append('g').attr('id', 'states')
-    .selectAll('.state').data(states)
-      .enter().append('path')
-      .attr('id', d => d.properties.name)
-      .attr('class', 'state')
-      .attr('d', d => path(d))
-      .on('mouseover', function() {
-        let p = this.parentElement;
-        p.removeChild(this);
-        p.appendChild(this);
-      });
+  svg.append('g').attr('id', 'states-boundaries')
+    .append('path').datum(statesB)
+    .attr('d', d => path(d))
+    .style('fill', 'none');
   
+  // *** Rename exceptions ***
+  svg.select('#LK_Region_Hannover').attr('id', 'Region_Hannover');
+  svg.select('#LK_Städteregion_Aachen').attr('id', 'Stadtregion_Aaachen');
 }
 
 
