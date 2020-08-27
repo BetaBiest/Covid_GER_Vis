@@ -234,6 +234,12 @@ async function script() {
   svg.select('#LK_Städteregion_Aachen').attr('id', 'Stadtregion_Aaachen');
 }
 
-
+function saveSVG() {
+  var svgString = new XMLSerializer().serializeToString(document.querySelector('#container > svg'));
+  var blob = new Blob([svgString], { type: "image/svg+xml;charset=utf-8" })
+  var url = URL.createObjectURL(blob);
+  console.log(url);
+  saveAs(blob, "map.svg");
+}
 
 script();

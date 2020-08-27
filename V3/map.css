@@ -1,21 +1,11 @@
-text {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.titel {
-  font-size: 2em;
-}
-
-.subtitle {
-  font-size: 1.4em;
-}
-
+text {font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;}
+.titel {font-size: 2em;}
+.subtitle {font-size: 1.4em;}
 #states-boundaries > path {
   stroke: white;
   stroke-width: 1.5;
   stroke-linejoin: round;
 }
-
 .district {
   stroke: white;
   stroke-opacity: 90%;
