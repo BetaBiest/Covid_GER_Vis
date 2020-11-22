@@ -1,0 +1,13 @@
+@import "parameter.scss";
+@import "mixin/";
+
+body {
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 20px;
+    margin: 0;
+    padding: 1em;
+    color: $colorFont;
+    background: $colorBackground;
+}
+
+@import "element/";

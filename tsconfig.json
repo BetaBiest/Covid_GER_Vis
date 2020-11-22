@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "lib": ["ES2019", "DOM"],
+        "target": "ES2019",
+        "jsx": "react",
+        "sourceMap": true,
+        "strict": true
+    }
+}
