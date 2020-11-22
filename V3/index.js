@@ -239,7 +239,7 @@ function saveSVG() {
   var blob = new Blob([svgString], { type: "image/svg+xml;charset=utf-8" })
   var url = URL.createObjectURL(blob);
   console.log(url);
-  saveAs(blob, "map.svg");
+  saveAs(blob, "map.svg"); // src: "https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.min.js"
 }
 
 script();
