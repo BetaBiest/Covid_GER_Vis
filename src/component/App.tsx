@@ -1,9 +1,12 @@
 import * as React from "react";
 import { render } from "react-dom";
+import { Titel } from "./titel";
 
-interface IProps {
-}
-
+interface IProps {}
 export const App = (props: IProps) => {
-    return <div></div>
+  return (
+    <>
+      <Titel text="My React App" />
+    </>
+  );
 };

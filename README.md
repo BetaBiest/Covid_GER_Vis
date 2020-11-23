@@ -13,6 +13,8 @@ Run `npm install` to install dependencies.
 Run `npm start` to start dev build.  
 Run `npm build` to run production build.
 
+Install TS support for packages with `npm i --save-dev @types/<packagename>`
+
 Where do i find ..?
 - Main script *"./src/index.tsx"*
   - React components *"./src/component"*
@@ -27,6 +29,9 @@ Where do i find ..?
 ## Source
 - Covid-19 data: [RKI (ArgisHub)]()
 - Germany map: [AliceWi (Github)](https://github.com/AliceWi/TopoJSON-Germany)
+  - Changes:
+    - *** Replaced Berlin with subdivisions ***
+    - *** Merged LK_Göttingen ***
 - Population (Record date: 30.12.2019):
   - [© Statistisches Bundesamt (Destatis), 2020 (12411-0015)](https://www-genesis.destatis.de/genesis//online)
   - [Statistik Berlin Brandenburg](https://www.statistik-berlin-brandenburg.de)
