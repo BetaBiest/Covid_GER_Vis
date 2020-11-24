@@ -4,6 +4,8 @@
         "target": "ES2019",
         "jsx": "react",
         "sourceMap": true,
-        "strict": true
+        "strict": true,
+        "moduleResolution": "node",
+        "resolveJsonModule": true
     }
 }
