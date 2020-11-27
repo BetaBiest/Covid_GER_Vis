@@ -1,0 +1,15 @@
+svg {
+  border: 1px solid white;
+  .container {
+    #counties {
+      fill: lightblue;
+      stroke: lightcoral;
+      stroke-width: 1px;
+    }
+    #states-border {
+      stroke: white;
+      stroke-width: 2px;
+      fill: none;
+    }
+  }
+}
