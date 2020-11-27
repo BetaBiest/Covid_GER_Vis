@@ -1,4 +1,4 @@
-import { geoMercator, geoPath, map, select, Selection } from "d3";
+import { geoMercator, geoPath, map, select } from "d3";
 import { Component, createRef, ReactNode, RefObject } from "react";
 import { feature, mesh } from "topojson";
 import { Topology, GeometryObject } from "topojson-specification";
@@ -25,8 +25,7 @@ interface IState {
 export class Map extends Component<IProps, IState> {
   counties: ReactNode[];
   statesBorder: ReactNode;
-  DOMRefs: Record<string, RefObject<any>>;
-  D3svg: Selection<any, null, null, undefined>;
+  svgRef: RefObject<any>;
   z: ZoomBehavior<Element, unknown>;
 
   constructor(props: IProps) {
@@ -36,9 +35,7 @@ export class Map extends Component<IProps, IState> {
     const { geoData, width = defaultWidth, height = defaultHeight } = props;
 
     // *** defining refs ***
-    this.DOMRefs = {};
-    this.DOMRefs.svg = createRef();
-    this.D3svg = select(this.DOMRefs.svg.current);
+    this.svgRef = createRef();
 
     // *** create pathprojection ***
     const projection = geoMercator()
@@ -95,24 +92,24 @@ export class Map extends Component<IProps, IState> {
   }
 
   zoomed(event: d3.D3ZoomEvent<Element, any>): void {
-    select(this.DOMRefs.svg.current)
+    select(this.svgRef.current)
       .select(".container")
       .attr("transform", event.transform.toString());
   }
 
   componentDidMount() {
-    select(this.DOMRefs.svg.current).call(this.z);
+    select(this.svgRef.current).call(this.z);
   }
 
   componentDidUpdate() {
-    select(this.DOMRefs.svg.current).call(this.z);
+    select(this.svgRef.current).call(this.z);
   }
 
   render() {
     const { id, width = defaultWidth, height = defaultHeight } = this.props;
     // TODO add datadependencie for color
     return (
-      <svg id={id} ref={this.DOMRefs.svg} width={width} height={height}>
+      <svg id={id} ref={this.svgRef} width={width} height={height}>
         <g className="container">
           <g id="counties">{this.counties}</g>
           <g id="states-border">{this.statesBorder}</g>
