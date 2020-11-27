@@ -1,13 +1,9 @@
 import { geoMercator, geoPath, map, select, Selection } from "d3";
-import { FeatureCollection } from "geojson";
 import { Component, createRef, ReactNode, RefObject } from "react";
 import { feature, mesh } from "topojson";
 import { Topology, GeometryObject } from "topojson-specification";
 import { zoom, ZoomBehavior } from "d3-zoom";
-
-function isFeatureCollection(value: any): value is FeatureCollection {
-  return (value as FeatureCollection).type == "FeatureCollection";
-}
+import { isFeatureCollection } from "../typeguard/isFeatureCollection";
 
 const defaultWidth = 500;
 const defaultHeight = 800;
