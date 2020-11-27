@@ -1,59 +1,43 @@
 import { geoMercator, geoPath, map, select, Selection } from "d3";
-import {
-  Feature,
-  FeatureCollection,
-  GeoJsonObject,
-  GeoJsonProperties,
-  MultiLineString,
-} from "geojson";
-import { Component, createRef, RefObject } from "react";
+import { FeatureCollection } from "geojson";
+import { Component, createRef, ReactNode, RefObject } from "react";
 import { feature, mesh } from "topojson";
-import {
-  Topology,
-  GeometryObject,
-  Objects,
-  Point,
-} from "topojson-specification";
-import { zoom, ZoomBehavior, zoomTransform } from "d3-zoom";
-import { Entry } from "webpack";
+import { Topology, GeometryObject } from "topojson-specification";
+import { zoom, ZoomBehavior } from "d3-zoom";
 
 function isFeatureCollection(value: any): value is FeatureCollection {
   return (value as FeatureCollection).type == "FeatureCollection";
 }
+
+const defaultWidth = 500;
+const defaultHeight = 800;
+
 // TODO rethink props
 interface IProps {
   geoData: Topology;
-  width: number; // optional
-  height: number; // optional
-  id: string;
+  width?: number;
+  height?: number;
+  id?: string;
   // data: File;
   // dataGetter: Function;
   // onklick: Function;
 }
 // TODO rethink state
 interface IState {
-  zoomTransform: null;
   dataGetter?: Function;
 }
 export class Map extends Component<IProps, IState> {
-  counties: JSX.Element[];
-  statesBorder: JSX.Element;
+  counties: ReactNode[];
+  statesBorder: ReactNode;
   DOMRefs: Record<string, RefObject<any>>;
   D3svg: Selection<any, null, null, undefined>;
   z: ZoomBehavior<Element, unknown>;
 
-  static defaultProps: Partial<IProps> = {
-    // TODO rather calculate default values
-    width: 500,
-    height: 800,
-    id: "",
-  };
-
   constructor(props: IProps) {
     super(props);
-    this.state = {
-      zoomTransform: null,
-    };
+    this.state = {};
+
+    const { geoData, width = defaultWidth, height = defaultHeight } = props;
 
     // *** defining refs ***
     this.DOMRefs = {};
@@ -64,13 +48,13 @@ export class Map extends Component<IProps, IState> {
     const projection = geoMercator()
       .center([10.5, 51.25])
       .scale(3400)
-      .translate([this.props.width / 2, this.props.height / 2]);
+      .translate([width / 2, height / 2]);
     const path = geoPath().projection(projection);
 
     // *** create stateborders ***
-    const Dstates = this.props.geoData.objects.states as GeometryObject<{}>;
+    const Dstates = geoData.objects.states as GeometryObject<{}>;
     let DstatesBorder = path(
-      mesh(this.props.geoData, Dstates, function (a, b) {
+      mesh(geoData, Dstates, function (a, b) {
         return a !== b;
       })
     );
@@ -80,10 +64,7 @@ export class Map extends Component<IProps, IState> {
     this.statesBorder = <path key="statesborder" d={DstatesBorder} />;
 
     // *** create counties ***
-    const Dcounties = feature(
-      this.props.geoData,
-      this.props.geoData.objects.counties
-    );
+    const Dcounties = feature(geoData, geoData.objects.counties);
     if (isFeatureCollection(Dcounties)) {
       this.counties = map(Dcounties.features, (d, i) => {
         let p = path(d);
@@ -111,7 +92,7 @@ export class Map extends Component<IProps, IState> {
       .scaleExtent([0.75, 10])
       .translateExtent([
         [0, 0],
-        [this.props.width, this.props.height],
+        [width, height],
       ])
       .on("zoom", (event) => this.zoomed.bind(this)(event));
     // TODO adjust constrain from zoom
@@ -131,15 +112,11 @@ export class Map extends Component<IProps, IState> {
     select(this.DOMRefs.svg.current).call(this.z);
   }
 
-  render(): JSX.Element {
+  render() {
+    const { id, width = defaultWidth, height = defaultHeight } = this.props;
     // TODO add datadependencie for color
     return (
-      <svg
-        id={this.props.id}
-        ref={this.DOMRefs.svg}
-        width={this.props.width}
-        height={this.props.height}
-      >
+      <svg id={id} ref={this.DOMRefs.svg} width={width} height={height}>
         <g className="container">
           <g id="counties">{this.counties}</g>
           <g id="states-border">{this.statesBorder}</g>

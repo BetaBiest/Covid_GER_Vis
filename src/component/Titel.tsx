@@ -1,7 +1,7 @@
-interface IProbs {
+interface IProps {
   text: String;
 }
-export const Titel = (probs: IProbs): JSX.Element => {
-  const { text } = probs;
+export const Titel = (props: IProps) => {
+  const { text } = props;
   return <h1>{text}</h1>;
 };
