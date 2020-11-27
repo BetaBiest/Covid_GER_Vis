@@ -14,7 +14,14 @@ module.exports = {
     rules: [
       {
         test: /\.(ts|tsx)$/,
-        use: "ts-loader",
+        use: [
+          {
+            loader: "ts-loader",
+            options: {
+              configFile: "tsconfig.dev.json",
+            },
+          },
+        ],
       },
       {
         test: /\.scss$/,

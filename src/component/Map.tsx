@@ -6,7 +6,7 @@ import {
   GeoJsonProperties,
   MultiLineString,
 } from "geojson";
-import * as React from "react";
+import { Component, createRef, RefObject } from "react";
 import { feature, mesh } from "topojson";
 import {
   Topology,
@@ -35,10 +35,10 @@ interface IState {
   zoomTransform: null;
   dataGetter?: Function;
 }
-export class Map extends React.Component<IProps, IState> {
+export class Map extends Component<IProps, IState> {
   counties: JSX.Element[];
   statesBorder: JSX.Element;
-  DOMRefs: Record<string, React.RefObject<any>>;
+  DOMRefs: Record<string, RefObject<any>>;
   D3svg: Selection<any, null, null, undefined>;
   z: ZoomBehavior<Element, unknown>;
 
@@ -57,7 +57,7 @@ export class Map extends React.Component<IProps, IState> {
 
     // *** defining refs ***
     this.DOMRefs = {};
-    this.DOMRefs.svg = React.createRef();
+    this.DOMRefs.svg = createRef();
     this.D3svg = select(this.DOMRefs.svg.current);
 
     // *** create pathprojection ***
