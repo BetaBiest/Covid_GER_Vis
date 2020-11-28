@@ -16,7 +16,9 @@ interface IProps {
   id?: string;
   // data: File;
   // dataGetter: Function;
-  // onklick: Function;
+  onclick?: (evént: React.MouseEvent<SVGPathElement, MouseEvent>) => void;
+  onenter?: (evént: React.MouseEvent<SVGPathElement, MouseEvent>) => void;
+  onleave?: (evént: React.MouseEvent<SVGPathElement, MouseEvent>) => void;
 }
 // TODO rethink state
 interface IState {
@@ -32,7 +34,14 @@ export class Map extends Component<IProps, IState> {
     super(props);
     this.state = {};
 
-    const { geoData, width = defaultWidth, height = defaultHeight } = props;
+    const {
+      geoData,
+      width = defaultWidth,
+      height = defaultHeight,
+      onclick = () => {},
+      onenter = () => {},
+      onleave = () => {},
+    } = props;
 
     // *** defining refs ***
     this.svgRef = createRef();
@@ -43,6 +52,8 @@ export class Map extends Component<IProps, IState> {
       .scale(3400)
       .translate([width / 2, height / 2]);
     const path = geoPath().projection(projection);
+
+    // TODO mesh and polygons should be drawn dependet on arguments
 
     // *** create stateborders ***
     const Dstates = geoData.objects.states as GeometryObject<{}>;
@@ -76,7 +87,16 @@ export class Map extends Component<IProps, IState> {
           key = `countie-${i}`;
         }
 
-        return <path key={key} className="counties" d={p} />;
+        return (
+          <path
+            key={key}
+            className="counties"
+            d={p}
+            onClick={onclick}
+            onMouseEnter={onenter}
+            onMouseLeave={onleave}
+          />
+        );
       });
     } else throw new Error("Not a FeatureColletion");
 
