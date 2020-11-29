@@ -11,6 +11,8 @@ const defaultHeight = 800;
 // TODO rethink props
 interface IProps {
   geoData: Topology;
+  areas?: Array<string>; // areas to be drawn
+  meshes?: Array<string>; // borders to be drawn
   width?: number;
   height?: number;
   id?: string;
@@ -26,10 +28,10 @@ interface IState {
 }
 // TODO add documentation
 export class Map extends Component<IProps, IState> {
-  counties: ReactNode[];
-  statesBorder: ReactNode;
   svgRef: RefObject<any>;
   z: ZoomBehavior<Element, unknown>;
+  JSXmeshes: ReactNode[];
+  JSXareas: ReactNode[];
 
   constructor(props: IProps) {
     super(props);
@@ -37,6 +39,8 @@ export class Map extends Component<IProps, IState> {
 
     const {
       geoData,
+      areas = [],
+      meshes = [],
       width = defaultWidth,
       height = defaultHeight,
       onclick = () => {},
@@ -56,55 +60,64 @@ export class Map extends Component<IProps, IState> {
 
     // TODO mesh and polygons should be drawn dependet on arguments
 
-    // *** create stateborders ***
-    const Dstates = geoData.objects.states as GeometryObject<{}>;
-    let DstatesBorder = path(
-      mesh(geoData, Dstates, function (a, b) {
-        return a !== b;
-      })
-    );
-    if (!DstatesBorder) {
-      DstatesBorder = "";
-    }
-    this.statesBorder = <path key="statesborder" d={DstatesBorder} />;
-
-    // *** create counties ***
-    const Dcounties = feature(geoData, geoData.objects.counties);
-    if (isFeatureCollection(Dcounties)) {
-      this.counties = map(Dcounties.features, (d, i) => {
-        let p = path(d);
-        // path must be string not undefined
-        if (!p) {
-          p = "";
-        }
-
-        let key = "";
-        if (d.properties && d.properties.name) {
-          key = d.properties.name;
-          if (d.properties.districtType) {
-            key = `${d.properties.districtType}_${key}`;
-          }
-        } else {
-          key = `countie-${i}`; // TODO find dynamic way
-        }
-
-        return (
-          <path
-            id={key}
-            key={key}
-            className="counties"
-            d={p}
-            onClick={onclick}
-            onMouseEnter={onenter}
-            onMouseLeave={onleave}
-          />
+    // *** create meshes ***
+    this.JSXmeshes = [];
+    for (let key of meshes) {
+      if (!geoData.objects[key]) {
+        throw Error(
+          `GeometrieCollection {${key}} does not exist on Topology.objects`
         );
-      });
-    } else throw new Error("Not a FeatureColletion");
+      }
+      let p = path(
+        mesh(geoData, geoData.objects[key] as GeometryObject<{}>, (a, b) => {
+          return a !== b;
+        })
+      );
+      this.JSXmeshes.push(<path key={key} id={key} d={p ? p : ""} />);
+    }
+
+    // *** create areas ***
+    this.JSXareas = [];
+    for (let key of areas) {
+      if (!geoData.objects[key]) {
+        throw Error(
+          `GeometrieCollection {${key}} does not exist on Topology.objects`
+        );
+      }
+      let Dareas = feature(geoData, geoData.objects[key]);
+      if (isFeatureCollection(Dareas)) {
+        this.JSXareas.push(
+          map(Dareas.features, (d, i) => {
+            let p = path(d);
+
+            let name = "";
+            if (d.properties && d.properties.name) {
+              name = d.properties.name;
+              if (d.properties.districtType) {
+                name = `${d.properties.districtType}_${name}`;
+              }
+            } else {
+              name = `${name}_${i}`;
+            }
+
+            return (
+              <path
+                id={name}
+                key={name}
+                className={key}
+                d={p ? p : ""}
+                onClick={onclick}
+                onMouseEnter={onenter}
+                onMouseLeave={onleave}
+              />
+            );
+          })
+        );
+      } else throw new Error("Not a FeatureColletion");
+    }
 
     // *** apply zoom ***
     // TODO adjust constrain from zoom
-    // TODO keep stroke-width unzoomed
     this.z = zoom()
       .scaleExtent([0.75, 10])
       .translateExtent([
@@ -114,6 +127,7 @@ export class Map extends Component<IProps, IState> {
       .on("zoom", (event) => this.zoomed.bind(this)(event));
   }
 
+  // TODO keep stroke-width unzoomed
   zoomed(event: d3.D3ZoomEvent<Element, any>): void {
     select(this.svgRef.current)
       .select(".container")
@@ -134,8 +148,8 @@ export class Map extends Component<IProps, IState> {
     return (
       <svg id={id} ref={this.svgRef} width={width} height={height}>
         <g className="container">
-          <g id="counties">{this.counties}</g>
-          <g id="states-border">{this.statesBorder}</g>
+          <g id="areas">{this.JSXareas}</g>
+          <g id="meshes">{this.JSXmeshes}</g>
         </g>
       </svg>
     );

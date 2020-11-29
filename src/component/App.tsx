@@ -10,7 +10,13 @@ export const App = (props: IProps) => {
   return (
     <>
       <Titel text="My React App" />
-      <Map id="germany-map" geoData={germany} onclick={onK} />
+      <Map
+        id="germany-map"
+        geoData={germany}
+        onclick={onK}
+        meshes={["states"]}
+        areas={["counties"]}
+      />
     </>
   );
 };
