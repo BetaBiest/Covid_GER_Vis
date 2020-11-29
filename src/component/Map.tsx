@@ -88,11 +88,6 @@ export class Map extends Component<IProps, IState> {
           key = `countie-${i}`; // TODO find dynamic way
         }
 
-        let c = "";
-        if (colors) {
-          c = colors[key] ? colors[key] : "";
-        }
-
         return (
           <path
             id={key}
@@ -102,7 +97,6 @@ export class Map extends Component<IProps, IState> {
             onClick={onclick}
             onMouseEnter={onenter}
             onMouseLeave={onleave}
-            fill={c}
           />
         );
       });
