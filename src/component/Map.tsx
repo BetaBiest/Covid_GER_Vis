@@ -24,6 +24,7 @@ interface IProps {
 interface IState {
   dataGetter?: Function;
 }
+// TODO add documentation
 export class Map extends Component<IProps, IState> {
   counties: ReactNode[];
   statesBorder: ReactNode;
@@ -77,30 +78,39 @@ export class Map extends Component<IProps, IState> {
           p = "";
         }
 
-        let key: string = "";
+        let key = "";
         if (d.properties && d.properties.name) {
           key = d.properties.name;
           if (d.properties.districtType) {
             key = `${d.properties.districtType}_${key}`;
           }
         } else {
-          key = `countie-${i}`;
+          key = `countie-${i}`; // TODO find dynamic way
+        }
+
+        let c = "";
+        if (colors) {
+          c = colors[key] ? colors[key] : "";
         }
 
         return (
           <path
+            id={key}
             key={key}
             className="counties"
             d={p}
             onClick={onclick}
             onMouseEnter={onenter}
             onMouseLeave={onleave}
+            fill={c}
           />
         );
       });
     } else throw new Error("Not a FeatureColletion");
 
     // *** apply zoom ***
+    // TODO adjust constrain from zoom
+    // TODO keep stroke-width unzoomed
     this.z = zoom()
       .scaleExtent([0.75, 10])
       .translateExtent([
@@ -108,7 +118,6 @@ export class Map extends Component<IProps, IState> {
         [width, height],
       ])
       .on("zoom", (event) => this.zoomed.bind(this)(event));
-    // TODO adjust constrain from zoom
   }
 
   zoomed(event: d3.D3ZoomEvent<Element, any>): void {
