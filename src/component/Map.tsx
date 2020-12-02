@@ -10,14 +10,17 @@ const defaultHeight = 800;
 
 // TODO rethink props
 interface IProps {
+  /**geoData: sourcdata in format .topojson | type Topology */
   geoData: Topology;
-  areas?: Array<string>; // areas to be drawn
-  meshes?: Array<string>; // borders to be drawn
+  /**areas?: names of objects to be drawn as areas*/
+  areas?: Array<string>;
+  /**meshes?: names of objects to be drawn as a mesh*/
+  meshes?: Array<string>;
   width?: number;
   height?: number;
+  /**id?: of the svg */
   id?: string;
-  // data: File;
-  // dataGetter: Function;
+  /**onclick?: callback called when clicked on areas */
   onclick?: (evént: React.MouseEvent<SVGPathElement, MouseEvent>) => void;
   onenter?: (evént: React.MouseEvent<SVGPathElement, MouseEvent>) => void;
   onleave?: (evént: React.MouseEvent<SVGPathElement, MouseEvent>) => void;
@@ -26,7 +29,13 @@ interface IProps {
 interface IState {
   dataGetter?: Function;
 }
-// TODO add documentation
+/**Map draws paths to given geoData
+ * @param {Topology} geoData source to be drawn
+ * @param {Array<string>} areas specify names of objects to be drawn as area
+ * @param {Array<string>} meshes specify names of objects to be drawn as mesh
+ * @param {number} width set width for the map
+ * @param {number} height set height for the map
+ */
 export class Map extends Component<IProps, IState> {
   svgRef: RefObject<any>;
   z: ZoomBehavior<Element, unknown>;
