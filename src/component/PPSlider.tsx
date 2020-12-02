@@ -78,11 +78,11 @@ export default class PPSlider extends Component<IProps, IState> {
         buttonContent: pauseSVG,
         buttonFunction: this.pause,
       });
-      this.playID = window.setInterval(() => this.tick(event), timePerStep);
+      this.playID = window.setInterval(() => this.tick(), timePerStep);
     }
   }
 
-  pause(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+  pause(event: React.MouseEvent<HTMLButtonElement, MouseEvent> | void) {
     this.setState({
       buttonContent: playSVG,
       buttonFunction: this.play,
@@ -90,7 +90,7 @@ export default class PPSlider extends Component<IProps, IState> {
     clearInterval(this.playID);
   }
 
-  tick(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+  tick() {
     if (this.state.value < this.props.max) {
       this.setState((prev) => {
         return {
@@ -98,7 +98,7 @@ export default class PPSlider extends Component<IProps, IState> {
         };
       });
     } else {
-      this.pause(event);
+      this.pause();
     }
   }
 
