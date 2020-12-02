@@ -1,6 +1,7 @@
 import { Titel } from "./titel";
 import { Map } from "./map";
 import { germany } from "../data/germany";
+import PPSlider from "./PPSlider";
 function onK(e: React.MouseEvent<SVGPathElement, MouseEvent>) {
   console.log(e.currentTarget.getAttribute("id"));
 }
@@ -17,6 +18,7 @@ export const App = (props: IProps) => {
         meshes={["states"]}
         areas={["counties"]}
       />
+      <PPSlider min={0} max={20} value={-20} runtime={5000} />
     </>
   );
 };
